@@ -1,8 +1,10 @@
 // 引入组件
-import lyLink from './ly-link'
+import reLink from './re-link'
+import reButton from './re-button'
 // 存放组件的数组
 const components = [
-    lyLink
+    reLink,
+    reButton
 ]
 
 // 定义 install 方法，接收 Vue 作为参数。
@@ -25,5 +27,6 @@ export default install
 export {
     // 导出的对象必须具有 install，才能被 Vue.use() 方法安装
     install,
-    lyLink
+    reLink,
+    reButton
 }

@@ -1,6 +1,6 @@
 <template>
   <!-- 用传过来 href 进行跳转 --> <!-- 用传过来的 type 修改颜色 -->
-  <a :href="href || undefined" :class="[`ly-link-${type}`]" >
+  <a :href="href || undefined" :class="[`re-link-${type}`]" target="_blank">
     <!-- 使用默认插槽来填充文本 -->
     <slot/>
   </a>
@@ -9,7 +9,7 @@
 <script>
 export default {
   // 等下 index.js 里面要用到
-  name:"lyLink",
+  name:"reLink",
   props: {
     // 限制类型
     href: String,

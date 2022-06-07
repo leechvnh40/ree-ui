@@ -1,12 +1,15 @@
 <template>
   <div id="app">
-    <ly-link href="https://baidu.com">lyLink</ly-link>
+    <re-link href="https://baidu.com">lyLink</re-link>
+    <br>
+    <re-button>123</re-button>
   </div>
 </template>
 
 <script>
 export default {
   name: 'App',
+
 }
 </script>
 

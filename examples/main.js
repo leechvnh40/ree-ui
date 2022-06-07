@@ -1,7 +1,10 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 // 引入index.js
-import {lyLink} from '../packages';
+// import {reLink} from '../packages';
+// import {reButton} from '../packages';
+import reUI from '../packages'
 
-createApp(App).use(lyLink).mount('#app')
+
+createApp(App).use(reUI).mount('#app')
 
