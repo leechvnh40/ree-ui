@@ -1,5 +1,5 @@
 // 引入组件
-import lyLink from './ly-link/src'
+import lyLink from './ly-link'
 // 存放组件的数组
 const components = [
     lyLink
@@ -14,8 +14,9 @@ const install = function (Vue) {
         Vue.component(component.name, component)
     })
 }
+export default install
 
-export default {
+export {
     // 导出的对象必须具有 install，才能被 Vue.use() 方法安装
     install,
     lyLink
