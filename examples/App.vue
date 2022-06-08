@@ -7,7 +7,7 @@
 
 <!--    dialog组件-->
 <!--    vue3中sync的用法-->
-    <re-dialog :visible="visible" v-model:visible="visible">
+    <re-dialog :vis="visible" v-model:visible="visible">
       <template v-slot:title>
         <h3>对话框</h3>
       </template>
@@ -20,6 +20,11 @@
 
 <!--    input组件-->
     <re-input v-model="value"></re-input>
+<!--    switch组件-->
+    <br>
+    <div v-show="input">switchTest</div>
+    <re-switch :value="input" v-model:input="input"></re-switch>
+
   </div>
 </template>
 
@@ -29,7 +34,8 @@ export default {
   data() {
     return {
       visible: false,
-      value: ''
+      value: '',
+      input: false
     }
   },
   methods: {

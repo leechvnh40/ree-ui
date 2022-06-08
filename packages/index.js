@@ -3,12 +3,14 @@ import reLink from './re-link'
 import reButton from './re-button'
 import reDialog from './re-dialog'
 import reInput from './re-input'
+import reSwitch from './re-switch'
 // 存放组件的数组
 const components = [
     reLink,
     reButton,
     reDialog,
-    reInput
+    reInput,
+    reSwitch
 ]
 
 // 定义 install 方法，接收 Vue 作为参数。
@@ -34,5 +36,6 @@ export {
     reLink,
     reButton,
     reDialog,
-    reInput
+    reInput,
+    reSwitch
 }

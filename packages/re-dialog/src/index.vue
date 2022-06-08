@@ -2,7 +2,7 @@
   <transition name="dialog-fade">
     <!-- @click.self避免冒泡，只有点击自己时才能触发   -->
     <!--    遮罩-->
-    <div class="re-dialog_wrapper" v-show="visible" @click.self="handleClose">
+    <div class="re-dialog_wrapper" v-show="vis" @click.self="handleClose">
       <div class="re-dialog" :style="{width:width,marginTop:top}">
         <div class="re-dialog_header">
           <slot name="title">
@@ -51,7 +51,7 @@ export default {
     footer: {
       type: Object
     },
-    visible: {
+    vis: {
       type: Boolean,
       default: false
     }
@@ -63,7 +63,6 @@ export default {
   },
   methods: {
     handleClose () {
-      console.log(121212121)
       this.$emit('update:visible', false)
     }
   }
