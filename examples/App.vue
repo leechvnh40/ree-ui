@@ -18,6 +18,8 @@
       这里是主体内容
     </re-dialog>
 
+<!--    input组件-->
+    <re-input v-model="value"></re-input>
   </div>
 </template>
 
@@ -26,7 +28,8 @@ export default {
   name: 'App',
   data() {
     return {
-      visible: false
+      visible: false,
+      value: ''
     }
   },
   methods: {
