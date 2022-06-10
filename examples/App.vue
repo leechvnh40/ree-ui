@@ -36,6 +36,17 @@
       <re-radio label="0">女</re-radio>
       <span>Picked:{{gender}}</span>
     </re-radio-group>
+<!--    单个checkbox组件-->
+    <re-checkbox label="option" v-model="status"></re-checkbox>
+    <span>Status:{{status}}</span>
+<!--    多个checkbox-->
+    <re-checkbox-group v-model="fruits">
+      <re-checkbox label="西瓜" ></re-checkbox>
+      <re-checkbox label="草莓" ></re-checkbox>
+      <re-checkbox label="火龙果" ></re-checkbox>
+      <span>Fruits:{{fruits}}</span>
+    </re-checkbox-group>
+
   </div>
 </template>
 
@@ -48,7 +59,9 @@ export default {
       value: '',
       input: false,
       picked:'1',
-      gender:'1'
+      gender:'1',
+      status:'false',
+      fruits:[]
     }
   },
   methods: {

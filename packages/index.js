@@ -6,6 +6,8 @@ import reInput from './re-input'
 import reSwitch from './re-switch'
 import reRadio from './re-ratio'
 import reRadioGroup from './re-radio-group'
+import reCheckbox from './re-checkbox'
+import reCheckboxGroup from './re-checkbox-group'
 // 存放组件的数组
 const components = [
     reLink,
@@ -14,7 +16,9 @@ const components = [
     reInput,
     reSwitch,
     reRadio,
-    reRadioGroup
+    reRadioGroup,
+    reCheckbox,
+    reCheckboxGroup
 ]
 
 // 定义 install 方法，接收 Vue 作为参数。
@@ -43,5 +47,7 @@ export {
     reInput,
     reSwitch,
     reRadio,
-    reRadioGroup
+    reRadioGroup,
+    reCheckbox,
+    reCheckboxGroup
 }
