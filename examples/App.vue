@@ -24,7 +24,18 @@
     <br>
     <div v-show="input">switchTest</div>
     <re-switch :value="input" v-model:input="input"></re-switch>
-
+<!--    ratio组件-->
+    <br>
+    <re-radio label="1" v-model="picked">男</re-radio>
+    <re-radio label="0" v-model="picked">女</re-radio>
+    <span>Picked:{{picked}}</span>
+<!--    redio-group组件 升级为单选框组，组间互斥，子单选框不用v-model由group完成-->
+    <br>
+    <re-radio-group v-model="gender">
+      <re-radio label="1">男</re-radio>
+      <re-radio label="0">女</re-radio>
+      <span>Picked:{{gender}}</span>
+    </re-radio-group>
   </div>
 </template>
 
@@ -35,7 +46,9 @@ export default {
     return {
       visible: false,
       value: '',
-      input: false
+      input: false,
+      picked:'1',
+      gender:'1'
     }
   },
   methods: {

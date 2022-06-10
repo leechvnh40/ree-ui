@@ -1,10 +1,10 @@
 <template>
-  <div class="one-switch" :class="{'is-checked':value}" @click="handleClick">
-    <span class="one-switch_core" ref="core">
-      <span class="one-switch_button"></span>
+  <div class="re-switch" :class="{'is-checked':value}" @click="handleClick">
+    <span class="re-switch_core" ref="core">
+      <span class="re-switch_button"></span>
     </span>
 <!--    用input是为了加上name属性-->
-    <input type="checkbox" class="one-switch_input" :name="name" ref="input">
+    <input type="checkbox" class="re-switch_input" :name="name" ref="input">
   </div>
 </template>
 <script>
@@ -63,14 +63,14 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-.one-switch{
+.re-switch{
   display: inline-block;
   align-items: center;
   position: relative;
   font-size: 14px;
   line-height: 20px;
   vertical-align: middle;
-  .one-switch_core{
+  .re-switch_core{
     margin: 0;
     display: inline-block;
     position: relative;
@@ -84,7 +84,7 @@ export default {
     cursor: pointer;
     transition: border-color .3s,background-color .3s;
     vertical-align: middle;
-    .one-switch_button{
+    .re-switch_button{
       position:absolute;
       top: 1px;
       left: 1px;
@@ -98,16 +98,16 @@ export default {
 }
 // 选中样式
 .is-checked {
-  .one-switch_core{
+  .re-switch_core{
     border-color: #409eff;
     background-color: #409eff;
-    .one-switch_button {
+    .re-switch_button {
       transform: translateX(20px);
     }
   }
 }
 // 隐藏input标签
-.one-switch_input{
+.re-switch_input{
   position:absolute;
   width: 0;
   height: 0;
