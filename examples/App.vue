@@ -23,7 +23,7 @@
 <!--    switch组件-->
     <br>
     <div v-show="input">switchTest</div>
-    <re-switch :value="input" v-model:input="input"></re-switch>
+    <re-switch :value="input" v-model="input"></re-switch>
 <!--    ratio组件-->
     <br>
     <re-radio label="1" v-model="picked">男</re-radio>
@@ -46,7 +46,15 @@
       <re-checkbox label="火龙果" ></re-checkbox>
       <span>Fruits:{{fruits}}</span>
     </re-checkbox-group>
-
+<!--    form组件-->
+    <re-form model="model" label-width="100px">
+      <re-form-item label="用户名">
+        <re-input placeholder="请输入用户名" v-model="model.username"></re-input>
+      </re-form-item>
+      <re-form-item label="选择">
+        <re-switch v-model="model.activate"></re-switch>
+      </re-form-item>
+    </re-form>
   </div>
 </template>
 
@@ -61,7 +69,11 @@ export default {
       picked:'1',
       gender:'1',
       status:'false',
-      fruits:[]
+      fruits:[],
+      model: {
+        username:'',
+        activate: true
+      }
     }
   },
   methods: {

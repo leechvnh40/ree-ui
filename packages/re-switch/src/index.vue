@@ -1,5 +1,5 @@
 <template>
-  <div class="re-switch" :class="{'is-checked':value}" @click="handleClick">
+  <div class="re-switch" :class="{'is-checked':modelValue}" @click="handleClick">
     <span class="re-switch_core" ref="core">
       <span class="re-switch_button"></span>
     </span>
@@ -13,7 +13,7 @@ export default {
   components: {
   },
   props: {
-    value: {
+    modelValue: {
       type: Boolean,
       defualt: false
     },
@@ -33,12 +33,12 @@ export default {
   mounted () {
     // 修改开关颜色
     if (this.activeColor || this.inactiveColor) {
-      var color = !this.value ? this.activeColor : this.inactiveColor
+      var color = !this.modelValue ? this.activeColor : this.inactiveColor
       this.$refs.core.style.borderColor = color
       this.$refs.core.style.backgroundColor = color
     }
     // 控制checkbox的值,input值同步value值
-    this.$refs.input.checked = this.value
+    this.$refs.input.checked = this.modelValue
   },
   watch: {
     'value' (e) {
@@ -55,9 +55,9 @@ export default {
   },
   methods: {
     handleClick () {
-      this.$emit('update:input', !this.value)
+      this.$emit('update:modelValue', !this.modelValue)
       // 控制checkbox的值,input值同步value值
-      this.$refs.input.checked = this.value
+      this.$refs.input.checked = this.modelValue
     }
   }
 }
